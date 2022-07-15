@@ -123,6 +123,12 @@ p {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
+.clearfix::before, .clearfix::after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
 .btn:hover {
     color: var(--clr-primary);
     background: var(--clr-primary-light);
@@ -169,4 +175,67 @@ Header
     outline-offset: 0.25rem;
     padding: 1rem 1.7rem;
 }
+
+/*
+====================
+content divider
+====================
+*/
+.content-divider {
+    height: 0.5rem;
+    background: linear-gradient(to left, var(--clr-primary), #e9b949, var(--clr-primary));
+}
+
+/*
+====================
+skills
+====================
+*/
+
+.skills {
+    background: var(--clr-grey-10);
+}
+
+.skill {
+    padding: 2.5rem 0;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.skill-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.25rem;
+    transition: var(--transition);
+    display: inline-block;
+    color: var(--clr-primary);
+}
+
+.skill-text {
+    color: var(--clr-grey-5);
+    max-width: 17rem;
+    margin: 0 auto;
+}
+
+.skill:hover {
+    background: var(--clr-white);
+    box-shadow: 0 2px var(--clr-primary);
+}
+
+.skill:hover .skill-icon {
+    transform: translateY(-5px);
+}
+
+@media screen and (min-width: 576px) {
+    .skill {
+        float: left;
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .skill {
+        width: 25%;
+    }
+}
+
 
