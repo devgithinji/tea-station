@@ -451,15 +451,18 @@ About
     color: var(--clr-grey-5);
 }
 
-@media screen and (min-width: 99px) {
+@media screen and (min-width: 992px) {
+
+    .section-center {
+        width: 95vw;
+    }
+
     .about-img, .about-info {
         float: left;
         width: 50%;
+        padding: 2rem;
     }
 
-    .about-info {
-        padding-left: 2rem;
-    }
 }
 
 /*
